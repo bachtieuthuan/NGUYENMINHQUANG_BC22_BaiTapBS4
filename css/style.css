@@ -4,6 +4,23 @@
     box-sizing: border-box;
 }
 
+.content__show .item__title {
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.item__content {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    transition: .5s;
+}
+
+.project__item:hover .item__content {
+    transform: translateY(0px);
+}
+
 .services__item p {
     color: rgba(29,29,36,.75);
     font-size: 18px;
@@ -94,6 +111,58 @@ font-size: 45px;
     box-sizing: border-box;
 }
 
+.item__overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #FD4766 100%);
+    opacity: 0;
+    transition: .5s;
+}
+
+.project__item:hover .item__overlay {
+    opacity: 1;
+}
+
+.content__show .sub__title {
+    color: #ffffff;
+    opacity: 0.7;
+    margin: 5px;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+.item__img {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.content__show {transform: translateY(30px);transition: .5s;margin-bottom: 15px;}
+
+.item__content p {
+    transform: translateY(100px);
+    transition: .5s;
+    color: #ffffff;
+    opacity: 0.7;
+    font-size: 18px;
+    line-height: 1.67;
+}
+
+.project__item:hover .item__content p {
+    transform: translateY(0);
+}
+
+.project__item:hover .content__show {transform: translateY(0px);}
+
+.project__item {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
 .header__bottom {
     overflow: hidden;
 }
@@ -180,14 +249,14 @@ a.link__submit {
     border: 2px solid hsla(0,0%,100%,.2);
 }
 
-.slide__content a.link__submit {
+a.link__submit.btn__primary {
     color: #fff;
     background-color: #FD4766;
     border-color: #FD4766;
     margin-top: 50px;
 }
 
-.slide__content a.link__submit:hover {
+a.link__submit.btn__primary:hover {
     border: 2px solid hsla(0,0%,100%,.2);
     background: transparent;
     border-color: #FD4766;
